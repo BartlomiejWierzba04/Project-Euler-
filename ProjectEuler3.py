@@ -3,16 +3,32 @@
 
 
 num = 600851475143
-print(num)
+def largest_prime_factor(n):
+    if n <= 1:
+        return None  # Handle cases where input is 1 or less
+    
+    largest_prime = -1
+    
+    # Divide out factors of 2
+    while n % 2 == 0:
+        largest_prime = 2
+        n = n // 2
+    
+    # Check odd numbers starting from 3
+    divisor = 3
+    while divisor * divisor <= n:
+        while n % divisor == 0:
+            largest_prime = divisor
+            n = n // divisor
+        divisor += 2  # Increment by 2 to skip even numbers
+    
+    # If remaining n is a prime greater than 2
+    if n > 2:
+        largest_prime = n
+    
+    return largest_prime
 
-
-#how do we iterate the primes?
-# don't need to, just need to add
-
-primes = [2,3,5,7,11,13,17]
-num = 2
-
-def generatePrimes():
-    for x in range(0,number):
+print(largest_prime_factor(num))
+#6857
     
     
