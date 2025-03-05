@@ -14,5 +14,5 @@ def generateTriplets():
 
 
 
-
+# ugly solution because ik that there is a way to cut down the symmetry and runtime but whatever
 generateTriplets()
