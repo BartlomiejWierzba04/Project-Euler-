@@ -4,6 +4,7 @@ import math
 
 
 #a^2+b^2=c^2 makes a pythagorean triplet a b c 
+#this code is awfullly inefficient btw
 def generateTriplets():
     TripletArr = []
     for x in range(1,1000): 
